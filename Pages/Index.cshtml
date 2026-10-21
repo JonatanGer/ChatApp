@@ -1,0 +1,33 @@
+﻿@page
+@model IndexModel
+
+@{
+    ViewData["Title"] = "Chatt";
+}
+
+<h1>Chatt</h1>
+
+<div>
+    <label>Användarnamn:</label>
+    <input type="text" id="usernameInput" />
+    <button id="joinButton">Anslut</button>
+</div>
+
+<br />
+
+<div>
+    <label>Meddelande:</label>
+    <input type="text" id="messageInput" style="width: 400px; height: 40px;" />    
+    <button id="sendButton">Skicka</button>
+</div>
+
+<hr />
+
+<h3>Meddelanden</h3>
+<ul id="messagesList"></ul>
+
+
+@section Scripts {
+    <script src="~/lib/microsoft-signalr/signalr.min.js"></script>
+    <script src="~/js/chat.js"></script>
+}
